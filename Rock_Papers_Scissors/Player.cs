@@ -1,16 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Rock_Papers_Scissors
 {
-    class Player
+    public class Player
     {
         public String playerOne;
         public String playerTwo;
         public String computerPlayer;
         public String userPlayerCount;
 
-        void main()
+        public void GetNumberOfPlayers()
         {
             do
             {
@@ -19,8 +18,7 @@ namespace Rock_Papers_Scissors
                 userPlayerCount = Console.ReadLine();
                 userPlayerCount.ToLower();
 
-                if (userPlayerCount != "one" || userPlayerCount != "two")
-                {
+                if (userPlayerCount != "one" || userPlayerCount != "two"){
                     Console.WriteLine("Please enter either one or two!");
                     Console.WriteLine("\n");
                 }
@@ -32,12 +30,12 @@ namespace Rock_Papers_Scissors
                     userPlayerCount = Console.ReadLine();
                     userPlayerCount.ToLower();
                 }
-            } while (userPlayerCount != "one" || userPlayerCount != "two");
+            }while(userPlayerCount != "one" || userPlayerCount != "two");
 
             if(userPlayerCount == "one"){
-                computerPlayer = playerTwo;
-            } else if(){
-                
+                Computer computer = new Computer();
+            } else if(userPlayerCount == "two") {
+                Humans humans = new Humans();
             }
         }
     }
