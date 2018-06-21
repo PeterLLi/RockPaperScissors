@@ -1,0 +1,6 @@
+/Users/peterli/Documents/Dev Code Camp/Projects/Rock_Papers_Scissors/Rock_Papers_Scissors/bin/Debug/Rock_Papers_Scissors.exe
+/Users/peterli/Documents/Dev Code Camp/Projects/Rock_Papers_Scissors/Rock_Papers_Scissors/bin/Debug/Rock_Papers_Scissors.pdb
+/Users/peterli/Documents/Dev Code Camp/Projects/Rock_Papers_Scissors/Rock_Papers_Scissors/obj/x86/Debug/Rock_Papers_Scissors.csprojResolveAssemblyReference.cache
+/Users/peterli/Documents/Dev Code Camp/Projects/Rock_Papers_Scissors/Rock_Papers_Scissors/obj/x86/Debug/Rock_Papers_Scissors.csproj.CoreCompileInputs.cache
+/Users/peterli/Documents/Dev Code Camp/Projects/Rock_Papers_Scissors/Rock_Papers_Scissors/obj/x86/Debug/Rock_Papers_Scissors.exe
+/Users/peterli/Documents/Dev Code Camp/Projects/Rock_Papers_Scissors/Rock_Papers_Scissors/obj/x86/Debug/Rock_Papers_Scissors.pdb
