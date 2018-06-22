@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace Rock_Papers_Scissors{
-    public class Humans:Player{
+    public class Humans:GetPlayers{
         public Humans(){
             
         }

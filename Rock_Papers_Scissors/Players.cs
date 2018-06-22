@@ -1,12 +1,10 @@
 ﻿using System;
 namespace Rock_Papers_Scissors
 {
-    class Players
+    public class Player
     {
-        public Players()
+        public Player()
         {
-            public String playerOne;
-            public 
         }
     }
 }

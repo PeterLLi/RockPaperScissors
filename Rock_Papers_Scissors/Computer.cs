@@ -1,10 +1,19 @@
 ﻿using System;
 
 namespace Rock_Papers_Scissors{
-    public class Computer:Player{
+    public class Computer:GetPlayers{
         public Computer(){
+            String firstPlayerGesture;
+            int roll;
+
             Random rnd = new Random();
-            int roll = rnd.Next(1, 5);
+            roll = rnd.Next(0, 4);
+
+            Console.WriteLine(roll);
+
+            firstPlayerGesture = Console.ReadLine();
+
+            Gesture();
         }
     }
 }
