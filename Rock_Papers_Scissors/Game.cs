@@ -15,9 +15,16 @@ namespace Rock_Papers_Scissors{
 
         public void RunGame(){
             GetNumberOfPlayers();
-            while() {
-                InitiatePlayerGame();
 
+            while(playerOnePoints < 3 && playerTwoPoints < 3){
+                InitiatePlayerGame();
+                CompareValues();
+            }
+
+            if(playerOnePoints == 3){
+                Console.WriteLine("Player 1 wins the game!");
+            }else if(playerTwoPoints == 3){
+                Console.WriteLine("Player 2 wins the game!");
             }
         }
 
@@ -40,26 +47,32 @@ namespace Rock_Papers_Scissors{
             if (playerCount == "one"){
                 playerOne = new Humans("Player 1");
                 playerTwo = new Computer("Computer");
-                InitiatePlayerGame();
-                Console.WriteLine(playerOne.choice);
-                Console.WriteLine(playerTwo.choice);
+
             }
 
             if (playerCount == "two"){
                 playerOne = new Humans("player1");
                 playerTwo = new Humans("player2");
-                InitiatePlayerGame();
-
-                Console.WriteLine(playerOne.choice);
-                Console.WriteLine(playerTwo.choice);
-
-
             }
         }
 
         public void InitiatePlayerGame(){
             playerOne.PlayerGesture();
             playerTwo.PlayerGesture();
+        }
+
+        public void CompareValues(){
+            int d = (5 + playerOne.choice - playerTwo.choice) % 5;
+
+            if((d == 1) || (d == 3)){
+                Console.WriteLine("Player one wins!");
+                playerOnePoints += 1;
+            }else if((d == 2) || (d == 4)){
+                Console.WriteLine("Player two wins!");
+                playerTwoPoints += 1;
+            }else if(d == 0){
+                Console.WriteLine("It's a tie!");
+            }
         }
     }
 }

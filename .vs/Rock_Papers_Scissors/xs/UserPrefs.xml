@@ -1,11 +1,11 @@
 ﻿<Properties StartupConfiguration="{2593F54E-415E-46C7-9B14-76CF31E97915}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Rock_Papers_Scissors/Players.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Rock_Papers_Scissors/Game.cs">
     <Files>
-      <File FileName="Rock_Papers_Scissors/Program.cs" Line="7" Column="39" />
-      <File FileName="Rock_Papers_Scissors/Game.cs" Line="45" Column="39" />
-      <File FileName="Rock_Papers_Scissors/Players.cs" Line="53" Column="24" />
-      <File FileName="Rock_Papers_Scissors/Computer.cs" Line="12" Column="18" />
-      <File FileName="Rock_Papers_Scissors/Humans.cs" Line="7" Column="45" />
+      <File FileName="Rock_Papers_Scissors/Program.cs" Line="7" Column="28" />
+      <File FileName="Rock_Papers_Scissors/Game.cs" Line="26" Column="19" />
+      <File FileName="Rock_Papers_Scissors/Players.cs" Line="43" Column="14" />
+      <File FileName="Rock_Papers_Scissors/Computer.cs" Line="13" Column="27" />
+      <File FileName="Rock_Papers_Scissors/Humans.cs" Line="9" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.Rock__Papers__Scissors PreferredExecutionTarget="MonoDevelop.Default" />
