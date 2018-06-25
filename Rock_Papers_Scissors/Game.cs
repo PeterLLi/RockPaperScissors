@@ -1,88 +1,65 @@
 ﻿using System;
-using System.Collections.Generic;
 
-namespace Rock_Papers_Scissors
-{
-    public class Game
-    {
+namespace Rock_Papers_Scissors{
+    public class Game{
         public int numOfPlayers;
+        public int playerOneChoice;
+        public int playerTwoChoice;
+        public int playerOnePoints;
+        public int playerTwoPoints;
+        public string playerCount;
+        Players players = new Players();
         Players playerOne;
         Players playerTwo;
-        public string playerCount;
-        public string userGesture;
-        public int choice;
 
-        public void GetNumberOfPlayers()
-        {
-            int choice = 0;
 
-            do
-            {
+        public void RunGame(){
+            GetNumberOfPlayers();
+            while() {
+                InitiatePlayerGame();
+
+            }
+        }
+
+        public void GetNumberOfPlayers(){
+            do{
                 Console.WriteLine("Welcome to rock paper scissor lizard spock.");
-                Console.WriteLine("Would you like to play with two players or against AI?");
+                Console.WriteLine("Would you like to play with one or two players?");
                 playerCount = Console.ReadLine();
                 playerCount.ToLower();
 
-                if (playerCount != "one" && playerCount != "two" && playerCount != "")
-                {
+                if(playerCount != "one" && playerCount != "two" && playerCount != ""){
                     Console.WriteLine("Please enter either one or two!");
                 }
-                if (playerCount == "")
-                {
+
+                if(playerCount == ""){
                     Console.WriteLine("Please enter something!");
                 }
             }while(playerCount != "one" && playerCount != "two" && playerCount == "");
 
-            if (playerCount == "one")
-            {
-                PlayerOneGesture();
-                Computer computer = new Computer();
+            if (playerCount == "one"){
+                playerOne = new Humans("Player 1");
+                playerTwo = new Computer("Computer");
+                InitiatePlayerGame();
+                Console.WriteLine(playerOne.choice);
+                Console.WriteLine(playerTwo.choice);
             }
-            else if (playerCount == "two")
-            {
-                Humans humans = new Humans();
-            }
-        }
 
-        public void PlayerOneGesture(){
-            Console.WriteLine("What gesture do you want to pick? Rock, paper, scissors, lizard, spock.");
-            userGesture = Console.ReadLine();
-            userGesture.ToLower();
+            if (playerCount == "two"){
+                playerOne = new Humans("player1");
+                playerTwo = new Humans("player2");
+                InitiatePlayerGame();
 
-            switch (userGesture)
-            {
-                case "rock":
-                    choice = 0;
-                    break;
-                case "paper":
-                    choice = 1;
-                    break;
-                case "scissors":
-                    choice = 2;
-                    break;
-                case "lizard":
-                    choice = 3;
-                    break;
-                case "spock":
-                    choice = 4;
-                    break;
-                default:
-                    Console.WriteLine("Please enter a valid option!");
-                    PlayerOneGesture();
-                    break;
+                Console.WriteLine(playerOne.choice);
+                Console.WriteLine(playerTwo.choice);
+
+
             }
         }
 
-        public string Gesture()
-        {
-            List<string> gestures = new List<string>();
-            gestures.Add("Rock");
-            gestures.Add("Paper");
-            gestures.Add("Scissors");
-            gestures.Add("Lizard");
-            gestures.Add("Spock");
-
-            return gestures[choice];
-        } 
+        public void InitiatePlayerGame(){
+            playerOne.PlayerGesture();
+            playerTwo.PlayerGesture();
+        }
     }
 }

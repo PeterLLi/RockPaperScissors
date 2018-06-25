@@ -1,19 +1,16 @@
 ﻿using System;
 
 namespace Rock_Papers_Scissors{
-    public class Computer:GetPlayers{
-        public Computer(){
-            String firstPlayerGesture;
-            int roll;
+    public class Computer : Players{
+        public int roll;
+        public Computer(string computerName){
+            this.computerName = computerName;
+        }
 
+        public override void PlayerGesture(){
             Random rnd = new Random();
             roll = rnd.Next(0, 4);
-
-            Console.WriteLine(roll);
-
-            firstPlayerGesture = Console.ReadLine();
-
-            Gesture();
+            choice = roll;
         }
     }
 }
